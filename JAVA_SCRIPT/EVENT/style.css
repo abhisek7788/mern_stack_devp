@@ -1,0 +1,15 @@
+div{
+    height: 100px;
+    width: 100px;
+    background-color: blue;
+    color: white;
+    border: 2px solid black;
+    transition: all 5s ease-in;
+    margin: 100px;
+}
+div:hover{
+            background-color: red;
+            color: black;
+            font-size: 20px;
+            transform: rotate(360deg);
+}

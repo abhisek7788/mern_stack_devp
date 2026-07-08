@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid layout</title>
+    <style>
+        .container{
+            display: grid;
+            /* grid-template-columns: 100px 200px 300px; */
+            /* grid-template-columns: 1fr 2fr 3fr; */
+            grid-template-columns: repeat(4,100px);
+            background-color: aqua;
+            grid-gap:10px;
+            grid-auto-rows: minmax(50px,auto);
+            /* grid-auto-columns: minmax(50px,auto); */
+        }
+        .item{
+            background-color: violet;
+            border: 3px solid black;
+            border-radius: 3px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="item">Box 1</div>
+            <div class="item">we have faced some pebm on zero shot prompting because sometimes it failed but in few shot prompting,we have to give 3,4 ex. to understand the pattern of our prompt then it gives a good response.</div>
+            <div class="item">Box 3</div>
+            <div class="item">Box 4</div>
+            <div class="item">Box 5</div>
+            <div class="item">Box 6</div>
+            <div class="item">Box 7</div>
+        </div>
+</body>
+</html>
