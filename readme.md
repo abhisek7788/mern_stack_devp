@@ -632,3 +632,13 @@ Event object:-
 API /fetch API:-
 - the fetch API provides an interface for fetching data.
 - it uses request & response object
+
+Practice qstn:-
+1. create a counter in js(increment & decrement).
+2. create a simple web page with a button that changes text when clicked
+
+React js history:-
+- latest version of react js is 19.2.7
+- initial release in the public was in july 2013.
+- React js was first use in 2011 for facebook's newsfeed features.
+- initially react gained lots of hate for mix of javascript+HTMLnbut in later stage or now these days 45% of software developer use
