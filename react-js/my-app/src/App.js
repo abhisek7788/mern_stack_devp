@@ -1,10 +1,13 @@
-
 import './App.css';
-
+// import About from './screens/About';
+// import Contact from './screens/Contact';
+import Practice from './screens/Practice';
 function App() {
   return (
     <div className="App">
-      <h1>hello Abhi</h1>
+      {/* <About/> */}
+      {/* <Contact/> */}
+      <Practice/>
     </div>
   );
 }
