@@ -500,7 +500,7 @@ methods of array:-
 4. concat()-add two or more array/ join multiple array
 5. unshift()-add an element to the stert of an array
 6. shift()-remove an element from thestart of an array
-7.slice()-return a peice of an array
+7. slice()-return a peice of an array
 8. splice()-change original array(add.remove,replace)    
 
 practice qstn->
@@ -581,13 +581,13 @@ For each loop in array:-
 Advance js:-
 1. DOM
 2. Event & Event handeling
-3. 
-4. 
+3. sync & Async code(promise, .then, .catch, async & await)
+4. API handling
 
 DOM in javascript:-
 - DOM stands for document model.
 - when a web page is loaded,the browser create a document object model of that page.
-- the HTML DOM is construvted as a tree like structure.
+- the HTML DOM model is constructed as a tree like structure.
 windoes ->document ->HTML ->Head ->meta tags & title
                           ->body ->h1,h2,img etc..
 
@@ -599,47 +599,201 @@ why we use DOM in js:-
 Window object:-
 - the window object represents an open window in a browser.
 - it is a browser object & it automatically creates by browser.
-- 
+- it is also a global object with lots of properties & methods.
 
 DOM Manipulation:-
-1. selecting with ID->
-2. selecting with class->
-3. selecting with tag->
+1. selecting with ID->document.getElementById("my ID")
+2. selecting with class->2. documnet.getElementsByclassName("myclass")
+3. selecting with tag->document.getElemensByTagName("p")
 4. querry selector->
   - document.queryselector("id/class/tag")
   - document.queryselectorAll("id/class/tag")
 5. attributes->
   - getAttributes(attr)->toget the attribute value
   - setAttributes(attr,value)->toget the attribute value
-6. 
-
-
-
+6. Insert element ->
+    - node.append(ele)->adds at the end of the node(inside)
+    - node.prepend(ele)-> add at the start of the node(inside)
+    - node.after(ele)-> adds after the node (outside)
+    - node.before(ele)-> adds before the node (outside)
+7. Delete element ->
+    - node.remove(ele) -> remove the node
 
 Event in js:-
 - the change in the state of an object is known as event.
--some event are:-
-  1. 
-  2. 
-  3. 
-  4. 
+- some event are:-
+  1. mouse Events (click,Dblclick,onmouseover)
+  2. keyboard Events (keypress,keyup,keydown)
+  3. form event (submit)
+  4. 4. print Event ....
+
 Event Handeling:-
-syntax-
+- syntax :-
+node.event =()=>{
+    //handle here
+}
 
+event object :-
+- it is a spacial; object that has details about the event.
+- all event handler have access to the event objects properties & methods.
+- syntax :-
+node.event=(e) => {
+    //handle here
+}
+- in methods you can get ->e.target,e.type etc....
 
-Event object:-
-- it is a special
-API /fetch API:-
-- the fetch API provides an interface for fetching data.
-- it uses request & response object
+practice task :-
+Q.create a toggle button that chage the screen to dark mode when clicked a light mode when clicked again.
 
-Practice qstn:-
-1. create a counter in js(increment & decrement).
-2. create a simple web page with a button that changes text when clicked
+Synchronous :-
+- it means the code runs in a particular sequence of instruction give in the program.
+- Each instruction waits for the privious instruction to complete it's execution.
+ex.
+console.log("one")
+console.log("two")
+console.log("three")
+output -> one two three
 
-React js history:-
+Asynchronous :-
+- Due to synchronous programming ,sometimes imp. instruction get blocked due to some privious instruction, which causes a dealy in the UI.
+- asychronous code execution allows to execute next instuction immediatelly and doen't block the flow.
+ ex.
+        console.log("one")
+        console.log("two")
+        setTimeout(() =>{
+            console.log("three")
+        }, 4000)//4000 ms = 4 s
+
+        console.log("four")
+        console.log("five")
+output -> one, two ,four ,five, three
+
+callback in javascript :-
+- a callback function which passed as an argument of another function.
+
+callback hel :-
+- it's nested callback stacked below one after another forming a pyramid structure.
+- this style of programming becomes difficult to understand & manage.
+
+promise in JS :-
+- it is a solution of callback hell.
+- syntax :-
+let promise = new promise ((resolve,reject)=>{
+    //statement
+})
+
+- a javascript promise object can be ->>
+ 1. pending -> the result is undefined
+ 2. resolved -> the result is a value (fulfilled)
+ 3. reject -> the result is an error
+
+- promise.then((res)=>{
+    //statement
+})
+- promise.catch((err)=>{
+    //statement
+})
+
+Async & Await in JS :-
+- async function always return a promise.
+- syntax :-
+async function myfunc(){
+    //statement
+}
+
+note :- await pauses the execution of its surrounding async function until the promise is settled.
+<!-- example :-
+async (statement 1 )
+await ->(statement 2 )
+await ->(statement 3 )
+await ->(statement 4) -->
+
+API Handing /fetch API :-
+-  the fetch API provides an interface for fetching data.
+- it uses request & response object.
+- the fetch() methods is used to fetch a data.
+- syntax :-
+let demo=fetch(URL)
+//josn => javascripts object notation
+
+status code of Node js :-
+- 200 ->ok
+- 201 ->create
+- 202 ->accepted
+- 300 ->multiple choice
+- 302 -> found
+- 400 -> bad request
+- 402 -> payment required
+- 404 -> Not found
+- 406 -> not accept
+- 408 -> request timeout
+- 500 -> internal server error
+- 502 -> bed gateway
+- 504 -> gateway timeout
+
+React JS:-
+- React js is a fronted java scripts Library.
+- react js developed by the facebook by software engineer jordan walke.
+- react is also know as reaact js or Reactjs.
+- basically react is a tool for building UI (user interface) components.
+
+NPX :-
+- npx stands for  node package Execute.
+- purpose -> it is an npm package runner bundled automatically with npm.
+- function -> it allows ypo to run & execute javascript package directlly from the npm, without needing in install them parmanentlly.
+- stroge-> it download the package to a temporary cache memory,execute the cammand & clear it up right after.
+
+NPM :-
+- NPM  stands for node package manager.
+- purpose ->it is the default package manager for node js.
+- function -> it installs ,updates & deletes javascripts packages and dependencies for our project.
+- storage -> it saves package parmanentlly either locally inside our project's "node modules" folder or globally on our system.
+
+React js History :-
 - latest version of react js is 19.2.7
-- initial release in the public was in july 2013.
-- React js was first use in 2011 for facebook's newsfeed features.
-- initially react gained lots of hate for mix of javascript+HTMLnbut in later stage or now these days 45% of software developer use
-7. node_modules:- 
+- inintal release to the public was in july 2013.
+- React js was 1st used in 2011 for facebook's newsfeed features.
+- initially react gained lots of hate for the mix of javascripts + HTML but in later stage or now these days 45% of software developer used react js as the core library for software development.
+- ".jsx" is the extention of react js.
+- jsx stands for 'javascript XML' means javascript + HTML.
+--------------------------------------------------------------------------------------------------------------------
+- When you are installing react it will have multiple way to install and setup but there are 2 common way that we are using react js is 
+1. CRA(create-react-app)
+2. vite(fastest way to install rect js)
+
+File structure of a react js folder ->
+1. README.md ->
+ - we will use readme.md for write some description or outline of our project.
+2. package.json ->
+ - it will keep scripts , versions details  & dependency of our project.
+3. package-lock.json ->
+- it basically store dependency of package.json file.
+4. .gitignore file ->
+ - files & folder ignored by git tracking.......
+5. src(source folder) ->
+- it is the main source folder where we can create file & write code in it.
+6. Public ->
+ - Public is used to take our website logo that show publically and we can store images and video in that public folder by creating separate separate folder.
+7. Node Modules -> 
+ - auto manages extrenal depandancies that need for execute the project and we can say it is the god father of the react js project.
+
+props in Reacts js :-
+- props stands for properties.
+- props are passed to components via HTML attributes.
+
+Practice Question From react js :-
+1. Create a functional component called "Greeting" that takes a "name" Prop and display"Hello ,<name>!" 
+expected output -> Hello , Rakesh !
+
+2. create a component "userCard" that takes props: name, age & city and display them in a card format. 
+expected output -> 
+name : Rakesh 
+Age : 23 
+City : Bhubaneswar
+
+3. create a component Button that accepts a label prop. if no label is passed, it should display "Click Me".
+
+4. create a parent component App that passes a message prop to a child component "MessageBox". The child should display the message. 
+expected output -> App -> MessageBox
+
+rakeshmohapatra2078@gmail.com
