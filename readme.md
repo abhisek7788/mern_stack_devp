@@ -797,3 +797,43 @@ City : Bhubaneswar
 expected output -> App -> MessageBox
 
 rakeshmohapatra2078@gmail.com
+
+React Hooks:-
+- Hooks allow functions to have access to state & other react features without using classes.
+- They provide direct API to react components like props, state, context etc..
+- Basically hook is a function that let us "hook into" react state & lifecycle feature from functional component.
+- there are many types of Hooks but most used hooks are:-
+ 1. useState()
+ 2. 
+ 3. 
+ 4. 
+ 5. 
+ 6. 
+ 7. 
+
+1. useState() Hook in react->
+- the react useState() hook allows us to the state of a functional component.
+- state generally refers to data or properties that need to be tracking in an application.
+
+imoprt useState->
+import{useState} from 'react'
+
+initialise useState->
+- we initialise our state by calling useState in our function component.
+- useState accepts an initial state & return two value.
+  1. the current state
+  2. a function that updates the state
+syntax->
+  const[state,setState]= useState("initial value")
+  ex- const[color,setColor]= useState("red")
+
+1. Toggle Button(on/off)
+- create a toggle button that toggle between on & off
+- expected o/p: ON->OFF->ON
+2. create a TODO list
+- user can add task
+- task can displayed in a list
+- each task has a delete button
+3. show/hide password
+- Toggle button show/hide
+- change input type dynamically
