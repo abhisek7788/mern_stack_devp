@@ -9,8 +9,10 @@ const Password = () => {
       type={showPassword?"text":"password"}
       placeholder="Enter password"/>
       <button onClick={()=>setshowPassword(prev=> !prev)}>
-        {showPassword?'hide':'show'}
+           {showPassword?'hide':'show'}
       </button>
+     
+   
     </div>
   )
 }
