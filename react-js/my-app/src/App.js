@@ -1,4 +1,5 @@
 import './App.css';
+import AxiosExample from './AxiosExample';
 // import About from './screens/About';
 // import Contact from './screens/Contact';
 // import Practice from './screens/Practice';
@@ -11,7 +12,14 @@ import './App.css';
 // import Todo from './react-hooks/usestate/Todo';
 // import Runeveryrender from './react-hooks/useeffect/Runeveryrender';
 // import Runonlyonce from './react-hooks/useeffect/Runonlyonce';
-import Rundependencychanges from './react-hooks/useeffect/Rundependencychanges';
+// import Rundependencychanges from './react-hooks/useeffect/Rundependencychanges';
+// import Accessdomele from './react-hooks/useref/Accessdomele';
+// import Storevalue from './react-hooks/useref/Storevalue';
+// import Storeprev from './react-hooks/useref/Storeprev';
+// import Calc from './react-hooks/usememo/Calc';
+// import Calc1 from './react-hooks/usememo/Calc1';
+// import Filteringlist from './react-hooks/usememo/Filteringlist';
+
 function App() {
   return (
     <div className="App">
@@ -27,7 +35,14 @@ function App() {
       {/* <Todo/> */}
       {/* <Runeveryrender/> */}
       {/* <Runonlyonce/> */}
-      <Rundependencychanges/>
+      {/* <Rundependencychanges/> */}
+      {/* <Accessdomele/> */}
+      {/* <Storevalue/> */}
+      {/* <Storeprev/> */}
+      {/* <Calc/> */}
+      {/* <Calc1/> */}
+      {/* <Filteringlist/> */}
+      <AxiosExample/>
     </div>
   );
 }
