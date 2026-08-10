@@ -731,6 +731,26 @@ status code of Node js :-
 - 502 -> bed gateway
 - 504 -> gateway timeout
 
+Closure in JS:-
+- A closure is the combination of a function and its lexial environment, allowing the function to access variable from its outer scope even the outer funxction has finished execution.
+
+practice question:-
+1. write a function createcounter() that
+    - initialise private variable count= 0
+    - return an object with two methods
+     -> increment()- increases count by 1
+     -> getcount()- get current count
+2. write a loop that prints
+3. 
+
+Spread Operator:-
+- the spread operator(...)in javascript is used to expand element of an array,object or iterable into indivisual elements.
+
+
+
+Higher order Function:-
+- a function that takes another function as an argument or return a function.
+
 React JS:-
 - React js is a fronted java scripts Library.
 - react js developed by the facebook by software engineer jordan walke.
@@ -837,3 +857,175 @@ syntax->
 3. show/hide password
 - Toggle button show/hide
 - change input type dynamically
+
+useEffect() Hook in react:-
+- useEffecct is a react hook that lets us perform side effects in functional component,such as-
+  ->fetching data from API
+  ->updating the DOM
+  ->setting up timer
+  ->adding event listener
+
+Syntax-
+import{useEffect} from "react";
+useEffect(()=>{
+    //add side effect here
+    return()=>{
+        //cleanup code
+    }
+},[dependecies]);
+
+1. Runs on every render->
+- if you don't provide any dependency array,the effect runs after every render.
+syntax:-
+useEffect(()=>{
+    console.log("component rendered")
+})
+2. Runns only once(on mount)
+- pass an empty dependancy array[]
+syntax:-
+useEffect(()=>{
+    console.log("component mounted)
+},[]);
+3. Runs when dependency changes
+- the effects runs only when the "count/dependency" changes.
+syntax:-
+useEffect(()=>{
+    console.log("component mounted")
+},[dependency]);
+
+useRef() Hooks in react:-
+- useRef is a react hook that let you sstore a value that doesn't cause re-render when it changes.
+How we use it->
+- it stores a value using .current
+- it does not re-render the component when updated.
+- used for->
+  - accessing dom element
+  - storing previous value
+
+Practice question:-
+1. Create a component that -> 
+    - has a state count
+    - uses useRef to store the previous value of count
+    - show both :
+        - current count
+        - previous count
+2. Create a component that -> 
+    - tracks how many times the component rendered.
+    - use useRef 
+    - display render count in UI
+3. Create a component that -> 
+    - start a timer using setInterval
+    - store interval ID using useRef
+    - has 2 button :
+        - start timer 
+        - stop timer
+
+useMemo()hooks in react JS:-
+- useMemo is a react hook that optimises performance by catching(memorization) a value so it doesn't get recalcuted on every render.
+- in simple words wwe can say -only recalcuted when needed, otherwise re use the old value.
+syntax-
+const memoization=useMemo(()=>{
+    //expensive calculation
+    return result;
+},[dependency])
+- it runs the function when dependency changes.
+- otherwise, it return the catched value(memoized value/storage value)
+
+why we use useMemo\
+
+practice Question of useMemo -> 
+1. Remove duplicate from list (using useMemo)
+    - create an array with duplicate values. 
+    - arr = [1,2,2,3,4,4,5]
+    - use useMemo to return a unique list
+    - add an input field 
+2. Calculate total price 
+    - create a list of product 
+    - cart = [
+        {
+            name: 'Shirt', 
+            price: 500
+        }, 
+        {
+            name: 'Shoose', 
+            price: 1500
+        }, 
+        {
+            name: 'Cap', 
+            price: 300
+        }, 
+    ]
+    - calculate total price using useMemo() 
+    - add a text input
+3. Count Even Numbers 
+    - create a large array of numbers (ex. 1 to 10,000)
+    - count how many nubers are even
+    - use useMemo for counting 
+    - add another state (like toggle button)
+
+useCallback hooks in react js:-
+- useCallback is a react hook that remember a function so it doesn't get recreated on every render.
+why we use it:-
+- in react, every time a component rerendered & function are created again.
+- this can create unnessary re-render in child component.
+- use
+
+
+1. Language Switcher ->
+    - Create a context for language (English, Hindi, etc...)
+        - add a button to switch language.
+        - change displayed text based on selected language.
+2. Shopping Cart Count ->
+    - Create a CartContext to store cart items count
+        - add "add to cart" button
+        - displayed total item in nav-bar
+3. Nested Component without Props ->
+    - Create 3 components: APP -> Parent -> Child
+        - Pass data using useContext instead of props
+        - display data in child
+        - Avoid prop drilling
+
+useReducer() hooks in React JS :-
+- useReducer() is a react hook used to manage complex state logics.
+- we can say it is the powerful version of useState.
+- best to use, When ->
+    - State has multiple values.
+    - logic is complex.
+    - Many action changes the state.
+Syntax :-
+const [state, dispatch] = useReducer(reducer, initialState);
+- where, state -> current value
+        dispatch -> function to send action
+        reducer -> function that updates the state
+Virtual DOM in React JS:-
+- virtual dom is a lightweight copy of the real dom.
+- like we can say ->
+   - real DOM-> Actual House
+   - virtual DOM ->a blueprint(copy of the house)
+
+Process of the virtual dom->
+- instead of changing the real dom every time, react yses virtual dom for
+  - updates the virtual dom.
+  - compares with the previous virsion
+  - changes only the necessary parts in real dom
+
+Why virtual Dom is useful?
+- faster update
+- efficient rendering
+- avoid unessary full page reload
+- improve performance
+
+React Router DOM in React JS:-
+- react router dom is a library used in react to handle navigation between pages without reloading the whole website.
+example->
+  - /home
+  - /about
+  - /contact
+- react router lets you switch between these pages without refreshing the page.
+
+Axious in react JS:-
+- axious is a popular js library used to make HTTP request (API call) from the browser.
+- it mainly helps you fetch data from API's
+- works with GET,POST,PUT,PATCH,DELETE
+- Return data in a clean json format.
+- mainly easier than fetch() 
