@@ -334,7 +334,7 @@ Rules for creating the variable name :-
 (Do not keep white space over here)
 - only letter, underscore, or special character($) should be the 1st character only.
 - reserved words can not be a variable name.
-ex. fro, while, var, let, console etc...
+ex. for, while, var, let, console etc...
 
 Datatype in JavaScript :-
 - Datatype is an attribute associated with a piece of data that tells a computer system how to interpret it's value.
@@ -462,7 +462,7 @@ string in javascript:-
 
 string literals & interpolation
 string literals:-
-- its a way to have embeded expressionin string.
+- its a way to have embeded expression in string.
 - it is denoted by''.
 string interpolation:-
 - to create a string by doing substitution of placeholder.
@@ -750,6 +750,26 @@ Spread Operator:-
 
 Higher order Function:-
 - a function that takes another function as an argument or return a function.
+
+Reduce() method in array:-
+reduce is used to combine all array elements in a single value
+
+imp. coding question for interview ->
+1. Reverse a string
+2. check palindrome
+3. find largest number
+4. find second largest number
+5. remove duplicate from array
+6. count frequency of character
+7. find duplicate element
+8. flatten an array
+9. sort an array without sort().
+10. find missing number
+11. check anagram
+12. fibonachi series
+13. factorial
+14. prime number
+15. find intersection of two array
 
 React JS:-
 - React js is a fronted java scripts Library.
