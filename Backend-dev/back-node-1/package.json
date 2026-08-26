@@ -1,0 +1,16 @@
+{
+  "name": "back-node-1",
+  "version": "1.0.0",
+  "description": "i want to create a backend setup",
+  "keywords": [
+    "javascript",
+    "node"
+  ],
+  "license": "ISC",
+  "author": "Abhisek Parida",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "start":"node file.jsx"
+  }
+}

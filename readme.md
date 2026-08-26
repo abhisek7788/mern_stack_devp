@@ -328,6 +328,8 @@ Variable in JavaScript :-
 - let is a block scope/function scope so we have been used let most of the cases.
 3. const - constant
 
+Hosting is a JS beheavior for processing execution brfore declaring the code.
+
 Rules for creating the variable name :- 
 - Variable names are case-sensitive like "a" & "A" is different.
 - only letters, digits, underscore & special character($) is allowed.
@@ -577,6 +579,9 @@ For each loop in array:-
 - arr.forEach(callback function)
 - callbackFunction -> it is a function to execute for each element in the array.
 - callbackFunction is a function that passed as an arugument of another function.
+
+A sallow copy copies the outer object but nested objects are still share the same referals
+- Deep copy creates completely independent copies 
 
 Advance js:-
 1. DOM
